@@ -1,13 +1,20 @@
 import numpy
 import math
 
-def Huang(data):
+def Huang(data, bitdepth=8):
     """Implements Huang's fuzzy thresholding method 
         Uses Shannon's entropy function (one can also use Yager's entropy function) 
         Huang L.-K. and Wang M.-J.J. (1995) "Image Thresholding by Minimizing  
         the Measures of Fuzziness" Pattern Recognition, 28(1): 41-51"""
+    
+    if bitdepth not in (8,16,24):
+        raise ValueError("Currently accepting 8, 16 or 24bits data.")
+    elif bitdepth == 16:
+        #do 16 to 8bit transformation
+    elif bitdepth = 24:
+        #do 24 to 8bit transformation
         
-    threshold=-1;
+    threshold=-1
 
     first_bin=  0
     for ih in range(254):
